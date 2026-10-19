@@ -1,0 +1,20 @@
+[Unit]
+Description=frani-coin — UCT invoicing on Unicity testnet2
+Documentation=https://github.com/NSEVEjk0/frani-coin
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/projects/frani-coin
+EnvironmentFile=-/home/ubuntu/projects/frani-coin/.env
+ExecStart=/usr/bin/node bin/invoice.js daemon
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

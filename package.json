@@ -1,0 +1,25 @@
+{
+  "name": "frani-coin",
+  "version": "1.0.0",
+  "description": "Token mint platform \u2014 create a token, mint units, send, and check balances. Made by CRYPTFRANI.",
+  "type": "module",
+  "bin": {
+    "frani-coin": "bin/frani-coin.js"
+  },
+  "scripts": {
+    "start": "node bin/frani-coin.js daemon",
+    "new": "node bin/frani-coin.js new",
+    "list": "node bin/frani-coin.js list",
+    "about": "node bin/frani-coin.js about",
+    "help": "node bin/frani-coin.js help",
+    "test": "node test/frani-coin.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@unicitylabs/sphere-sdk": "0.17.3",
+    "ws": "^8.21.3"
+  }
+}
