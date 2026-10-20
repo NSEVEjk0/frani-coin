@@ -23,7 +23,7 @@ export class Store {
     await this.init();
     record.updatedAt = Date.now();
     await writeFile(this._file(record.id), JSON.stringify(record, null, 2), 'utf8');
-    return this._file(invoice.id);
+    return this._file(record.id);
   }
 
   async get(id) {

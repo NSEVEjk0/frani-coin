@@ -7,6 +7,7 @@ import { config } from '../src/config.js';
 import { openWallet, closeWallet } from '../src/wallet.js';
 import { Store } from '../src/store.js';
 import { createToken, persistToken, getToken, listTokens, mint, balanceOf, transfer, renderToken } from '../src/coin.js';
+import { fromBaseUnits } from '../src/amounts.js';
 
 const log = (...a) => console.log(new Date().toISOString(), ...a);
 
