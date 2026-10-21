@@ -17,3 +17,4 @@ logs/
 # os / editor
 .DS_Store
 *.swp
+.vercel

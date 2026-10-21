@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}";
+self.__REACT_LOADABLE_MANIFEST='{"../node_modules/@unicitylabs/nostr-js-sdk/dist/browser/index.js -> crypto":{"id":8989,"files":["static/chunks/aaea2bcf.2112f7d02762e0fe.js","static/chunks/501.c31e95d12bec3d31.js","static/chunks/250.f3afddf4e25753b0.js"]},"../node_modules/@unicitylabs/nostr-js-sdk/dist/browser/index.js -> zlib":{"id":4581,"files":["static/chunks/501.c31e95d12bec3d31.js","static/chunks/581.dd760a11d259ff84.js"]}}';

@@ -1,0 +1,1 @@
+"use strict";exports.id=273,exports.ids=[273],exports.modules={8273:(s,r,t)=>{t.d(r,{default:()=>o});class o{constructor(){throw Error("ws is not available in the browser")}}}};
