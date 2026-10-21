@@ -29,10 +29,12 @@ import {
   connectWallet,
   connectExistingWallet,
   connectGuestWallet,
+  copyPrivateKey,
   currentWallet,
   disconnectWallet,
   type Wallet,
 } from "@/lib/wallet";
+import { PrivateKeyDialog } from "@/components/private-key-dialog";
 
 const NAV = [
   { href: "/", label: "Launchpad" },
@@ -47,6 +49,7 @@ export function Header() {
   const [mnemonic, setMnemonic] = useState("");
   const [busy, setBusy] = useState(false);
   const [freshMnemonic, setFreshMnemonic] = useState("");
+  const [keyOpen, setKeyOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -159,6 +162,9 @@ export function Header() {
                   {wallet.address}
                 </div>
                 <DropdownMenuSeparator />
+                {wallet.kind !== "guest" ? (
+                  <DropdownMenuItem onClick={() => setKeyOpen(true)}>Copy private key</DropdownMenuItem>
+                ) : null}
                 <DropdownMenuItem onClick={handleDisconnect}>Disconnect</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -249,6 +255,8 @@ export function Header() {
           )}
         </DialogContent>
       </Dialog>
+
+      <PrivateKeyDialog open={keyOpen} onOpenChange={setKeyOpen} onReveal={copyPrivateKey} />
     </>
   );
 }

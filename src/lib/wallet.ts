@@ -131,3 +131,22 @@ export function disconnectWallet() {
     /* ignore */
   }
 }
+
+/** Copy the wallet's private key (for real Unicity wallets). */
+export function copyPrivateKey(): string {
+  const mnemonic = (() => {
+    try {
+      return window.localStorage.getItem(MNEMONIC_KEY);
+    } catch {
+      return null;
+    }
+  })();
+  if (!mnemonic || !isValidMnemonic(mnemonic)) {
+    throw new Error("No wallet key available");
+  }
+  const { address } = addressFromMnemonic(mnemonic);
+  void address;
+  const mk = identityFromMnemonicSync(mnemonic.trim());
+  const info = deriveAddressInfo(mk, BASE_PATH, 0, false);
+  return `0x${info.privateKey}`;
+}

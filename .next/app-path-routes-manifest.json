@@ -1,1 +1,1 @@
-{"/_not-found/page":"/_not-found","/create/page":"/create","/page":"/","/presales/page":"/presales","/api/tokens/route":"/api/tokens","/token/[id]/page":"/token/[id]","/api/presales/route":"/api/presales","/api/tokens/[id]/route":"/api/tokens/[id]"}
+{"/_not-found/page":"/_not-found","/create/page":"/create","/api/presales/route":"/api/presales","/api/tokens/[id]/route":"/api/tokens/[id]","/api/tokens/route":"/api/tokens","/token/[id]/page":"/token/[id]","/presales/page":"/presales","/page":"/"}
